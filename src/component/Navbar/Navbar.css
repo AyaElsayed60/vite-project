@@ -1,0 +1,183 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    position: relative; 
+}
+
+.navbar h1 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navbar-toggle-icon {
+    width: 25px;
+    height: 3px;
+    background-color: #ff4500;
+    margin: 3px 0;
+    border-radius: 5px;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin-right: 2rem;
+}
+
+.navbar-menu li:last-child {
+    margin-right: 0;
+}
+
+.navbar-menu a,
+.navbar-menu .link {
+    color: gray;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover,
+.navbar-menu .link:hover {
+    color: #ff4500;
+}
+
+.navbar-icons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-icons img {
+    width: 24px;
+    height: 24px;
+    margin-left: 1.5rem;
+    cursor: pointer;
+}
+
+.navbar-icons img.user-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.navbar-icons img.cart-icon {
+    width: 24px;
+    height: 24px;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.75rem 1rem;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-icons {
+        margin-top: 1rem;
+        justify-content: center; 
+    }
+
+    .navbar-icons img {
+        margin: 0 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        height: auto;
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-container {
+        max-width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar h1 {
+        font-size: 1.5rem;
+    }
+
+    .navbar-menu a,
+    .navbar-menu .link {
+        font-size: 0.9rem;
+    }
+
+    .navbar-icons img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .navbar-icons img.user-icon {
+        width: 28px;
+        height: 28px;
+    }
+}
+.navbar-menu a.active {
+    color: #ff4500; 
+    font-weight: bold; 
+}
+
+.navbar-menu a:hover {
+    color: #161515; 
+}
+
+.navbar-menu a.active:hover {
+    color: #ff4500; 
+}
+
